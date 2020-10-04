@@ -42,6 +42,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Bomb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -81,14 +82,16 @@
             // mediumToolStripMenuItem
             // 
             this.mediumToolStripMenuItem.Name = "mediumToolStripMenuItem";
-            this.mediumToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.mediumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mediumToolStripMenuItem.Text = "Medium";
+            this.mediumToolStripMenuItem.Click += new System.EventHandler(this.mediumToolStripMenuItem_Click);
             // 
             // fastToolStripMenuItem
             // 
             this.fastToolStripMenuItem.Name = "fastToolStripMenuItem";
-            this.fastToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.fastToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fastToolStripMenuItem.Text = "Fast";
+            this.fastToolStripMenuItem.Click += new System.EventHandler(this.fastToolStripMenuItem_Click);
             // 
             // instructionsToolStripMenuItem
             // 
@@ -166,7 +169,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 550);
+            this.label1.Location = new System.Drawing.Point(12, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 6;
@@ -178,12 +181,23 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameEngine);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(391, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 19);
+            this.label2.TabIndex = 7;
+            this.label2.Text = " Speed: 5";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(484, 961);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -223,6 +237,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label label2;
     }
 }
 
